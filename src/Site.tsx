@@ -1,9 +1,9 @@
 import "./Site.css"
 import dzialki from "./assets/dzialki_1.png";
 import dzialki2 from "./assets/dzialki_2.png";
-import zd1 from "./assets/zdjecie1.jpg";
-import zd2 from "./assets/zdjecie2.jpg";
-import zd3 from "./assets/zdjecie3.jpg";
+import zd1 from "./assets/zdjecie1.png";
+import zd2 from "./assets/zdjecie2.png";
+import zd3 from "./assets/zdjecie3.png";
 
 import VerticalMenu from "./VerticalMenu";
 
