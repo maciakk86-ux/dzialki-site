@@ -1,6 +1,5 @@
 import React from "react";
 import "./ImageGallery.css";
-import "./ImageWithOverlay.css";
 
 type ImageGalleryProps = {
   images: string[];
@@ -8,16 +7,13 @@ type ImageGalleryProps = {
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   const [index, setIndex] = React.useState(0);
-  const [loading, setLoading] = React.useState(true);
   const startX = React.useRef<number | null>(null);
 
   const prev = () => {
-    setLoading(true);
     setIndex((i) => (i === 0 ? images.length - 1 : i - 1));
   };
 
   const next = () => {
-    setLoading(true);
     setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
   };
 
@@ -40,26 +36,12 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      {/* SPINNER */}
-      {loading && (
-        <div className="spinner">
-          <div className="loader" />
-        </div>
-      )}
-
       <div
         className="gallery-track"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {images.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt=""
-            className="gallery-image"
-            onLoad={() => setLoading(false)}
-            onError={() => setLoading(false)}
-          />
+          <img key={i} src={src} alt="" className="gallery-image" />
         ))}
       </div>
 
@@ -71,10 +53,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
           <span
             key={i}
             className={`dot ${i === index ? "active" : ""}`}
-            onClick={() => {
-              setLoading(true);
-              setIndex(i);
-            }}
+            onClick={() => setIndex(i)}
           />
         ))}
       </div>
