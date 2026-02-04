@@ -1,0 +1,45 @@
+.main-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.banner {
+  background-color: #282c34;
+  color: white;
+  padding: 40px 20px;
+}
+
+.content {
+  padding: 40px 20px;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.top-bar {
+  /* width: 100%;
+  display: block; */
+  z-index: 2;
+  position: relative;
+  /* border: solid 1px black; */
+}
+.middle-image {
+  width: 100%;
+  display: block;
+  /* margin-top: -250px; */
+  z-index: 1;
+  position: relative;
+}
+.bottom-bar {
+    background-color: #F8972F;
+    border-radius: 0 0 10px 10px;
+    border-width: 0px;
+    position: relative;
+    z-index: 2;
+    margin-top:-20px;
+    padding:10px;
+}
