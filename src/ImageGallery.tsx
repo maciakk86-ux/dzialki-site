@@ -43,7 +43,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
       {/* SPINNER */}
       {loading && (
         <div className="spinner">
-          <div className="image-loader" />
+          <div className="loader" />
         </div>
       )}
 
