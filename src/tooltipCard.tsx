@@ -1,4 +1,4 @@
-import React, {type FC, type ReactNode } from "react";
+import {type FC, type ReactNode } from "react";
 import { Box, Divider, Typography } from "@mui/material";
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';

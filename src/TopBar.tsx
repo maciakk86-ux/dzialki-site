@@ -5,13 +5,10 @@ import CallIcon from '@mui/icons-material/Call';
 import AlternateEmailSharpIcon from '@mui/icons-material/AlternateEmailSharp';
 
 type TopBarProps = {
-  title?: string;
   staticWidth?: boolean;
-  onLoginClick?: () => void;
-
 };
 
-const TopBar: React.FC<TopBarProps> = ({ title = "Moja Strona", onLoginClick, staticWidth=false }) => {
+const TopBar: React.FC<TopBarProps> = ({staticWidth=false }) => {
   return (
     <header style={{...styles.header, ...(staticWidth ? styles.widthStatic : {})}}>
       <div style={styles.left}>

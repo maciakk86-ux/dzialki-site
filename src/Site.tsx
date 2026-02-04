@@ -16,7 +16,7 @@ import ImageGallery from "./ImageGallery";
 
 const Site: React.FC = () => {
   const [view, setView] = useState<string>("pos1");
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -32,7 +32,6 @@ const Site: React.FC = () => {
           onPosition2Click={()=>setView("pos2")}
           onPosition3Click={()=>setView("pos3")}
           onPosition4Click={()=>setView("pos4")}
-          onPosition5Click={()=>setView("pos5")}
         />
         
         {view === "pos1" && 

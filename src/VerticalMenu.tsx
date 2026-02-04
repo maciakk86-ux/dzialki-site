@@ -1,19 +1,15 @@
-import { Box, IconButton, Typography } from "@mui/material";
-import Collapse from "@mui/material/Collapse";
+import { Box, IconButton } from "@mui/material";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import MapIcon from "@mui/icons-material/Map";
-import PhoneIcon from "@mui/icons-material/Phone";
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import LooksTwoIcon from '@mui/icons-material/LooksTwo';
-import { useState } from "react";
+
 
 type VerticalMenuProps = {
   onPosition1Click: () => void;
   onPosition2Click: () => void;
   onPosition3Click: () => void;
   onPosition4Click: () => void;
-  onPosition5Click: () => void;
-
 };
 
 const VerticalMenu: React.FC<VerticalMenuProps> = ({
@@ -21,12 +17,7 @@ const VerticalMenu: React.FC<VerticalMenuProps> = ({
   onPosition2Click,
   onPosition3Click,
   onPosition4Click,
-  onPosition5Click,
 }) => {
-  const [openContact, setOpenContact] = useState(false);
-  const handlePhoneClick = () => {
-    setOpenContact((prev) => !prev);
-  };
   return (
     <Box
       sx={{

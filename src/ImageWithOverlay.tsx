@@ -3,7 +3,6 @@ import "./ImageWithOverlay.css";
 import AnimatedTooltip from "./tooltip";
 import TooltipCard from "./tooltipCard";
 import type { ImageWithOverlayProps } from "./dzialk.model";
-import TopBar from "./TopBar";
 
 const ImageWithOverlay: React.FC<ImageWithOverlayProps> = ({
   backgroundSrc,
